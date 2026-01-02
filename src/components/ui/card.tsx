@@ -7,14 +7,17 @@ const cardVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-card border border-border/50",
-        elevated: "bg-card shadow-md hover:shadow-lg border border-border/30 hover:-translate-y-0.5",
-        glass: "bg-card/70 backdrop-blur-xl border border-border/40 shadow-sm",
-        accent: "bg-soft/50 border border-accent/20 hover:border-accent/40",
-        highlight: "bg-highlight/5 border border-highlight/20 hover:border-highlight/40",
-        interactive: "bg-card border border-border/50 hover:border-accent/40 hover:shadow-xl hover:-translate-y-1 cursor-pointer",
-        soft: "bg-soft/40 border border-border/30 hover:bg-soft/60",
-        peach: "bg-gradient-to-br from-soft/50 to-accent/10 border border-accent/20",
+        default: "bg-card border border-border/50 shadow-sm",
+        elevated: "bg-card border border-border/30 shadow-md hover:shadow-lg hover:-translate-y-0.5",
+        glass: "backdrop-blur-xl bg-card/80 border border-border/40 shadow-sm",
+        accent: "bg-accent/5 border border-accent/20 shadow-sm hover:border-accent/40",
+        highlight: "bg-highlight/5 border border-highlight/20 shadow-sm hover:border-highlight/40",
+        interactive: "bg-card border border-border/50 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-accent/30 cursor-pointer",
+        soft: "bg-soft/50 border border-soft/30 shadow-sm hover:bg-soft/60",
+        peach: "bg-gradient-to-br from-peach-50 to-peach-100/50 border border-peach-200/50 shadow-sm",
+        gradient: "bg-gradient-to-br from-card to-secondary/30 border border-border/30 shadow-md",
+        ghost: "bg-transparent border border-border/20 hover:bg-secondary/30",
+        outline: "bg-transparent border-2 border-border hover:border-accent/50",
       },
     },
     defaultVariants: {
@@ -44,7 +47,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex flex-col space-y-1.5 p-5 sm:p-6", className)}
     {...props}
   />
 ));
@@ -56,7 +59,7 @@ const CardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn("text-2xl font-display font-semibold leading-none tracking-tight", className)}
+    className={cn("text-lg sm:text-xl font-display font-semibold leading-tight tracking-tight", className)}
     {...props}
   />
 ));
@@ -68,7 +71,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground leading-relaxed", className)}
+    className={cn("text-sm sm:text-base text-muted-foreground leading-relaxed", className)}
     {...props}
   />
 ));
@@ -78,7 +81,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  <div ref={ref} className={cn("p-5 sm:p-6 pt-0", className)} {...props} />
 ));
 CardContent.displayName = "CardContent";
 
@@ -88,7 +91,7 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn("flex items-center p-5 sm:p-6 pt-0", className)}
     {...props}
   />
 ));
