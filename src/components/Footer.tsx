@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import edifyLogo from "@/assets/edify-logo.png";
 
 export function Footer() {
   return (
@@ -7,11 +8,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold text-foreground mb-4">
-              <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-sm">C</span>
-              </div>
-              ClarityPath
+            <Link to="/" className="flex items-center gap-3 font-display text-xl font-semibold text-foreground mb-4">
+              <img 
+                src={edifyLogo} 
+                alt="Edify Logo" 
+                className="w-10 h-10 rounded-full object-cover shadow-sm"
+              />
+              Edify
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
               A learning and clarity platform for everyone. Find your path, build your system, achieve your goals.
@@ -60,7 +63,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ClarityPath. All rights reserved.
+            © {new Date().getFullYear()} Edify. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Built with clarity and care.
