@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Target, BookOpen, Shield, Sparkles } from "lucide-react";
+import { PageTransition } from "@/components/PageTransition";
 
 const About = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen">
       {/* Hero */}
       <section className="section-spacing bg-secondary/20">
@@ -173,6 +175,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

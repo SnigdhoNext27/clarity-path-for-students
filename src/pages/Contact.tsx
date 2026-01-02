@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Send, MessageCircle, Lightbulb } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { PageTransition } from "@/components/PageTransition";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -43,6 +44,7 @@ const Contact = () => {
   };
 
   return (
+    <PageTransition>
     <div className="min-h-screen">
       {/* Hero */}
       <section className="section-spacing bg-secondary/20">
@@ -198,6 +200,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

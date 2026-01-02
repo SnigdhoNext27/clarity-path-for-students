@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { RESOURCES } from "@/data/content";
 import { ArrowRight, Lightbulb } from "lucide-react";
 import { useState } from "react";
+import { PageTransition } from "@/components/PageTransition";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -14,6 +15,7 @@ const Resources = () => {
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
   return (
+    <PageTransition>
     <div className="min-h-screen">
       {/* Hero */}
       <section className="section-spacing bg-secondary/20">
@@ -139,6 +141,7 @@ const Resources = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 
