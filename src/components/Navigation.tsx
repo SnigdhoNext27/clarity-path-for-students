@@ -20,32 +20,35 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
-      <nav className="container-wide flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/70 backdrop-blur-xl">
+      <nav className="container-wide flex h-18 items-center justify-between py-3">
         {/* Logo */}
         <Link 
           to="/" 
-          className="flex items-center gap-3 font-display text-xl font-semibold text-foreground hover:text-accent transition-colors"
+          className="flex items-center gap-3 font-display text-xl font-semibold text-foreground hover:text-highlight transition-colors group"
         >
-          <img 
-            src={edifyLogo} 
-            alt="Edify Logo" 
-            className="w-10 h-10 rounded-full object-cover shadow-sm"
-          />
-          Edify
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full blur-md bg-accent/30 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <img 
+              src={edifyLogo} 
+              alt="Edify Logo" 
+              className="relative w-11 h-11 rounded-full object-cover shadow-md group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">Edify</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1 bg-secondary/50 rounded-full px-2 py-1.5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
               className={cn(
-                "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+                "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
                 location.pathname === link.href
-                  ? "bg-secondary text-foreground"
-                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground hover:bg-background/50"
               )}
             >
               {link.label}
