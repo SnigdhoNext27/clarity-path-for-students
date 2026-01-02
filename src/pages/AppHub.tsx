@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_HUB_ITEMS } from "@/data/content";
 import { CheckCircle2, FileText, Mail, Calendar } from "lucide-react";
+import { PageTransition } from "@/components/PageTransition";
 
 const iconMap: { [key: string]: any } = {
   "Application Documents": FileText,
@@ -17,6 +18,7 @@ const fadeInUp = {
 
 const AppHub = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen">
       {/* Hero */}
       <section className="section-spacing bg-secondary/20">
@@ -136,6 +138,7 @@ const AppHub = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

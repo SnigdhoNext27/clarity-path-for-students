@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ROADMAPS, RESOURCES } from "@/data/content";
 import { ArrowRight, BookOpen, Compass, Sparkles, Target, Zap, Heart, GraduationCap } from "lucide-react";
 import edifyLogo from "@/assets/edify-logo.png";
+import { PageTransition } from "@/components/PageTransition";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -22,6 +23,7 @@ const staggerContainer = {
 
 const Index = () => {
   return (
+    <PageTransition>
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section className="relative section-spacing">
@@ -414,6 +416,7 @@ const Index = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 
