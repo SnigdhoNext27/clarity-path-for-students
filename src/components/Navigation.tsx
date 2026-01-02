@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import edifyLogo from "@/assets/edify-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -24,12 +25,14 @@ export function Navigation() {
         {/* Logo */}
         <Link 
           to="/" 
-          className="flex items-center gap-2 font-display text-xl font-semibold text-foreground hover:text-accent transition-colors"
+          className="flex items-center gap-3 font-display text-xl font-semibold text-foreground hover:text-accent transition-colors"
         >
-          <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-            <span className="text-accent-foreground font-bold text-sm">C</span>
-          </div>
-          ClarityPath
+          <img 
+            src={edifyLogo} 
+            alt="Edify Logo" 
+            className="w-10 h-10 rounded-full object-cover shadow-sm"
+          />
+          Edify
         </Link>
 
         {/* Desktop Navigation */}

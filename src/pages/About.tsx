@@ -13,7 +13,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="font-display mb-4">About ClarityPath</h1>
+            <h1 className="font-display mb-4">About Edify</h1>
             <p className="text-xl text-muted-foreground">
               A learning platform built on the belief that clarity beats motivation, 
               systems beat goals, and calm focus beats hustle culture.
@@ -41,7 +41,7 @@ const About = () => {
               </p>
               
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                ClarityPath exists because we believe the problem isn't lack of motivation—it's lack 
+                Edify exists because we believe the problem isn't lack of motivation—it's lack 
                 of clarity. When you know exactly what to do next, you don't need willpower. When you 
                 have a system that works, you don't need to rely on feeling inspired.
               </p>
@@ -159,7 +159,7 @@ const About = () => {
           >
             <h2 className="font-display text-3xl mb-6">Building Trust Through Transparency</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              ClarityPath is built on the idea that learning tools should serve learners, 
+              Edify is built on the idea that learning tools should serve learners, 
               not the other way around. Everything here is designed to help you learn effectively 
               and then get out of your way.
             </p>

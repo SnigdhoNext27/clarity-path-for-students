@@ -83,7 +83,7 @@ const Index = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display mb-4">Why ClarityPath?</h2>
+            <h2 className="font-display mb-4">Why Edify?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We believe in systems over motivation, clarity over complexity, and sustainable progress over hustle culture.
             </p>
